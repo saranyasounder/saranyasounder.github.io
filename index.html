@@ -22,6 +22,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,38 +34,13 @@
       line-height: 1.6;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     a { color: inherit; text-decoration: none; }
     .container { width: min(92%, var(--max)); margin: 0 auto; }
-    .internship-callout {
-  display: inline-block;
-  margin: 0 0 1.75rem;
-  padding: 0.9rem 1rem;
-  max-width: 560px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(125, 211, 252, 0.18);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
-  backdrop-filter: blur(14px);
-}
-
-.callout-kicker {
-  margin-bottom: 0.45rem;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #67e8f9;
-}
-
-.callout-text {
-  color: #e6edf3;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.callout-text strong {
-  color: #ffffff;
-}
 
     .nav {
       position: sticky;
@@ -73,6 +49,7 @@
       backdrop-filter: blur(20px);
       background: rgba(5, 8, 22, 0.6);
       border-bottom: 1px solid rgba(168,85,247,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
     .nav-inner {
@@ -123,9 +100,13 @@
     }
 
     .btn, .btn-outline {
-      background: rgba(255,255,255,0.03);
-      border-color: rgba(148,163,184,0.25);
-      backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.82rem 1.15rem;
+      border-radius: 14px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      font-weight: 600;
     }
 
     .btn {
@@ -138,28 +119,24 @@
     .btn:hover {
       background: #4f46e5;
       box-shadow: 0 20px 60px rgba(168,85,247,0.45);
+      transform: translateY(-3px) scale(1.01);
     }
 
     .btn-outline {
       background: rgba(255,255,255,0.03);
       border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
     }
 
-    .btn, .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.8rem 1.1rem;
-      border-radius: 14px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    .btn-outline:hover {
+      transform: translateY(-3px) scale(1.01);
+      border-color: rgba(125, 211, 252, 0.26);
+      background: rgba(255,255,255,0.05);
     }
-
-    .btn:hover, .btn-outline:hover { transform: translateY(-3px) scale(1.01); }
 
     .card,
     .tag,
-    .avatar,
-    .nav {
+    .avatar {
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
@@ -175,7 +152,10 @@
       border-color: rgba(125, 211, 252, 0.22);
     }
 
-    .hero { padding: 6rem 0 4rem; position: relative; }
+    .hero {
+      padding: 6rem 0 4rem;
+      position: relative;
+    }
 
     .hero::after {
       content: "";
@@ -217,8 +197,56 @@
       color: var(--muted);
       font-size: 1.08rem;
       max-width: 62ch;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       line-height: 1.75;
+    }
+
+    .internship-callout {
+      position: relative;
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 0 1.6rem;
+      padding: 1rem 1.15rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(34,211,238,0.08));
+      border: 1px solid rgba(103, 232, 249, 0.28);
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.28),
+        0 0 0 1px rgba(255,255,255,0.03) inset;
+      backdrop-filter: blur(14px);
+      overflow: hidden;
+    }
+
+    .internship-callout::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, #67e8f9, #8b5cf6);
+      border-radius: 999px;
+    }
+
+    .callout-kicker {
+      margin-bottom: 0.4rem;
+      padding-left: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #67e8f9;
+    }
+
+    .callout-text {
+      padding-left: 0.4rem;
+      color: #e6edf3;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .callout-text strong {
+      color: #ffffff;
+      font-weight: 700;
     }
 
     .hero-actions {
@@ -280,6 +308,13 @@
       box-shadow: 0 25px 80px rgba(99,102,241,0.45);
       border: 1px solid rgba(168,85,247,0.25);
       margin-bottom: 1.2rem;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .avatar:hover {
@@ -376,6 +411,10 @@
       .stats {
         grid-template-columns: 1fr;
       }
+
+      #about .card[style] {
+        grid-template-columns: 1fr !important;
+      }
     }
 
     @media (max-width: 640px) {
@@ -386,6 +425,10 @@
 
       .hero { padding-top: 3.5rem; }
       h1 { font-size: 2.5rem; }
+
+      .internship-callout {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -403,62 +446,62 @@
     </div>
   </nav>
 
-<header class="hero" id="top">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Computer Science @ Oregon State University</span>
-      <h1>Building scalable software, data-driven systems, and intelligent applications.</h1>
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Computer Science @ Oregon State University</span>
+        <h1>Building scalable software, data-driven systems, and intelligent applications.</h1>
 
-      <p class="lead">
-        I’m Saranya Sounder Rajan, a Computer Science undergraduate at Oregon State University with a 3.93 GPA. I have experience building backend systems, data pipelines, and machine learning applications using Python, SQL, and modern development tools.
-      </p>
+        <p class="lead">
+          I’m Saranya Sounder Rajan, a Computer Science undergraduate at Oregon State University with a 3.93 GPA. I have experience building backend systems, data pipelines, and machine learning applications using Python, SQL, and modern development tools.
+        </p>
 
-      <div class="internship-callout">
-        <div class="callout-kicker">Currently Seeking</div>
-        <div class="callout-text">
-          <strong>Software Engineering</strong>, <strong>Data Science</strong>, <strong>Data Analytics</strong>, and <strong>AI/ML</strong> internship opportunities
+        <div class="internship-callout">
+          <div class="callout-kicker">Currently Seeking</div>
+          <div class="callout-text">
+            <strong>Software Engineering</strong>, <strong>Data Science</strong>, <strong>Data Analytics</strong>, and <strong>AI/ML</strong> internship opportunities
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn-outline" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>3.93</strong>
+            <span class="muted">GPA at Oregon State</span>
+          </div>
+          <div class="stat">
+            <strong>300+</strong>
+            <span class="muted">Students mentored</span>
+          </div>
+          <div class="stat">
+            <strong>1,000+</strong>
+            <span class="muted">Sentence pairs processed in ML research</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-actions">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn-outline" href="#contact">Contact Me</a>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <strong>3.93</strong>
-          <span class="muted">GPA at Oregon State</span>
+      <div class="hero-card">
+        <div class="avatar">
+          <img src="profile.jpeg" alt="Saranya Sounder Rajan" />
         </div>
-        <div class="stat">
-          <strong>300+</strong>
-          <span class="muted">Students mentored</span>
-        </div>
-        <div class="stat">
-          <strong>1,000+</strong>
-          <span class="muted">Sentence pairs processed in ML research</span>
+        <h3 style="margin:0 0 0.5rem;">At a glance</h3>
+        <p class="muted">AI research, databases, sequence modeling, Android development, and automation-focused teaching support.</p>
+        <p style="margin:0 0 1rem;color:#cbd5e1;font-size:0.95rem;">Focused on building elegant, practical systems with strong technical depth and clean execution.</p>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Kotlin</span>
         </div>
       </div>
     </div>
-
-    <div class="hero-card">
-      <div class="avatar">
-        <img src="profile.jpeg?v=2" alt="Saranya Sounder Rajan" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:24px;" />
-      </div>
-      <h3 style="margin:0 0 0.5rem;">At a glance</h3>
-      <p class="muted">AI research, databases, sequence modeling, Android development, and automation-focused teaching support.</p>
-      <p style="margin:0 0 1rem;color:#cbd5e1;font-size:0.95rem;">Focused on building elegant, practical systems with strong technical depth and clean execution.</p>
-      <div class="tag-list">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">Flask</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">Kotlin</span>
-      </div>
-    </div>
-  </div>
-</header>
+  </header>
 
   <section id="about">
     <div class="container" style="margin-bottom:2rem;">
@@ -478,6 +521,7 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <p class="section-subtitle">A quick snapshot of my academic background and focus areas.</p>
