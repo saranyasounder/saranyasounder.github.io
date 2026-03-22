@@ -35,6 +35,36 @@
 
     a { color: inherit; text-decoration: none; }
     .container { width: min(92%, var(--max)); margin: 0 auto; }
+    .internship-callout {
+  display: inline-block;
+  margin: 0 0 1.75rem;
+  padding: 0.9rem 1rem;
+  max-width: 560px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+  backdrop-filter: blur(14px);
+}
+
+.callout-kicker {
+  margin-bottom: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #67e8f9;
+}
+
+.callout-text {
+  color: #e6edf3;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.callout-text strong {
+  color: #ffffff;
+}
 
     .nav {
       position: sticky;
@@ -373,41 +403,62 @@
     </div>
   </nav>
 
-<div>
-  <span class="eyebrow">Computer Science @ Oregon State University</span>
-  <h1>Building scalable software, data-driven systems, and intelligent applications.</h1>
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Computer Science @ Oregon State University</span>
+      <h1>Building scalable software, data-driven systems, and intelligent applications.</h1>
 
-  <p class="lead">
-    I’m Saranya Sounder Rajan, a Computer Science undergraduate at Oregon State University with a 3.93 GPA. I have experience building backend systems, data pipelines, and machine learning applications using Python, SQL, and modern development tools.
-  </p>
+      <p class="lead">
+        I’m Saranya Sounder Rajan, a Computer Science undergraduate at Oregon State University with a 3.93 GPA. I have experience building backend systems, data pipelines, and machine learning applications using Python, SQL, and modern development tools.
+      </p>
 
-  <div class="internship-callout">
-    <span class="callout-label">Currently Seeking</span>
-    <p>
-      <strong>Software Engineering</strong>, <strong>Data Science</strong>, <strong>Data Analytics</strong>, and <strong>AI/ML</strong> internship opportunities to build scalable systems, drive insight from data, and create intelligent solutions with real-world impact.
-    </p>
-  </div>
+      <div class="internship-callout">
+        <div class="callout-kicker">Currently Seeking</div>
+        <div class="callout-text">
+          <strong>Software Engineering</strong>, <strong>Data Science</strong>, <strong>Data Analytics</strong>, and <strong>AI/ML</strong> internship opportunities
+        </div>
+      </div>
 
-  <div class="hero-actions">
-    <a class="btn" href="#projects">View Projects</a>
-    <a class="btn-outline" href="#contact">Contact Me</a>
-  </div>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn-outline" href="#contact">Contact Me</a>
+      </div>
 
-  <div class="stats">
-    <div class="stat">
-      <strong>3.93</strong>
-      <span class="muted">GPA at Oregon State</span>
+      <div class="stats">
+        <div class="stat">
+          <strong>3.93</strong>
+          <span class="muted">GPA at Oregon State</span>
+        </div>
+        <div class="stat">
+          <strong>300+</strong>
+          <span class="muted">Students mentored</span>
+        </div>
+        <div class="stat">
+          <strong>1,000+</strong>
+          <span class="muted">Sentence pairs processed in ML research</span>
+        </div>
+      </div>
     </div>
-    <div class="stat">
-      <strong>300+</strong>
-      <span class="muted">Students mentored</span>
-    </div>
-    <div class="stat">
-      <strong>1,000+</strong>
-      <span class="muted">Sentence pairs processed in ML research</span>
+
+    <div class="hero-card">
+      <div class="avatar">
+        <img src="profile.jpeg?v=2" alt="Saranya Sounder Rajan" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:24px;" />
+      </div>
+      <h3 style="margin:0 0 0.5rem;">At a glance</h3>
+      <p class="muted">AI research, databases, sequence modeling, Android development, and automation-focused teaching support.</p>
+      <p style="margin:0 0 1rem;color:#cbd5e1;font-size:0.95rem;">Focused on building elegant, practical systems with strong technical depth and clean execution.</p>
+      <div class="tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Kotlin</span>
+      </div>
     </div>
   </div>
-</div>
+</header>
 
   <section id="about">
     <div class="container" style="margin-bottom:2rem;">
