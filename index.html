@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saranya Sounder Rajan | Portfolio</title>
-  <meta name="description" content="Portfolio website for Saranya Sounder Rajan, Computer Science undergraduate specializing in AI and data systems." />
+  <meta name="description" content="Portfolio website for Saranya Sounder Rajan, Computer Science undergraduate specializing in software, data, and intelligent systems." />
   <style>
     :root {
       --bg: #050816;
@@ -29,7 +29,6 @@
         radial-gradient(circle at 20% 0%, rgba(99,102,241,0.35), transparent 40%),
         radial-gradient(circle at 80% 100%, rgba(168,85,247,0.25), transparent 40%),
         linear-gradient(180deg, #050816 0%, #070c20 100%);
-
       color: var(--text);
       line-height: 1.6;
     }
@@ -108,27 +107,26 @@
 
     .btn:hover {
       background: #4f46e5;
-      box-shadow: none;
-    }
-
-    .btn:hover {
-      box-shadow: 0 12px 30px rgba(168,85,247,0.3);
-    }
-
-    .btn:hover {
       box-shadow: 0 20px 60px rgba(168,85,247,0.45);
     }
 
     .btn-outline {
       background: rgba(255,255,255,0.03);
-      border-color: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .btn, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.1rem;
+      border-radius: 14px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
     .btn:hover, .btn-outline:hover { transform: translateY(-3px) scale(1.01); }
 
     .card,
-    .btn,
-    .btn-outline,
     .tag,
     .avatar,
     .nav {
@@ -157,6 +155,7 @@
       background: linear-gradient(to bottom, transparent, rgba(7,11,26,0.35));
       pointer-events: none;
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.35fr 0.9fr;
@@ -181,7 +180,7 @@
       line-height: 0.98;
       letter-spacing: -0.04em;
       margin: 0 0 1rem;
-      max-width: 11ch;
+      max-width: 12ch;
     }
 
     .lead {
@@ -379,12 +378,10 @@
       <div>
         <span class="eyebrow">Computer Science @ Oregon State University</span>
         <h1>Building scalable software, data-driven systems, and intelligent applications.</h1>
-
-    <p class="lead">
-      I’m Saranya Sounder Rajan, a Computer Science undergraduate at Oregon State University with a 3.93 GPA. I have experience building backend systems, data pipelines, and machine learning applications using Python, SQL, and modern development tools.  
-
-      I’m actively seeking Software Engineering, Data, and AI/ML internship opportunities where I can design efficient systems, solve real-world problems, and contribute to impactful products.
-    </p>
+        <p class="lead">
+          I’m Saranya Sounder Rajan, a Computer Science undergraduate at Oregon State University with a 3.93 GPA. I have experience building backend systems, data pipelines, and machine learning applications using Python, SQL, and modern development tools.
+          I’m actively seeking Software Engineering, Data, and AI/ML internship opportunities where I can design efficient systems, solve real-world problems, and contribute to impactful products.
+        </p>
         <div class="hero-actions">
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn-outline" href="#contact">Contact Me</a>
@@ -407,7 +404,7 @@
 
       <div class="hero-card">
         <div class="avatar">
-          <img src="profile.jpeg?v=2" alt="Saranya Sounder Rajan" style="width:100%;height:100%;object-fit:cover;border-radius:24px;display:block;border-radius:24px;" />
+          <img src="profile.jpeg?v=2" alt="Saranya Sounder Rajan" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:24px;" />
         </div>
         <h3 style="margin:0 0 0.5rem;">At a glance</h3>
         <p class="muted">AI research, databases, sequence modeling, Android development, and automation-focused teaching support.</p>
