@@ -369,30 +369,32 @@
       margin: 0.35rem 0;
       color: var(--muted);
     }
+
     .project-media {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  background: rgba(255,255,255,0.03);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.28);
-}
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      background: rgba(255,255,255,0.03);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
 
-.project-media video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .project-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: #020617;
+    }
 
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
 
     .meta {
       font-size: 0.92rem;
@@ -610,30 +612,32 @@
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">Selected technical work across machine learning, mobile development, and systems programming.</p>
       <div class="grid-3">
-<article class="card project-card">
-  <div class="project-media">
-    <video autoplay muted loop playsinline preload="metadata">
-      <source src="assets/videos/moodmap_demo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
 
-  <div class="meta">FastAPI · React · Tailwind · Hugging Face · Mar 2026</div>
-  <h3>MoodMap – Emotion Analysis Platform</h3>
-  <p>
-    Built a full-stack NLP application that analyzes emotional tone in user text using a transformer model served through a FastAPI backend and visualized via a React + Tailwind frontend.
-  </p>
-  <ul>
-    <li>Designed REST API endpoints for real-time emotion classification with confidence scores and interpretation.</li>
-    <li>Integrated a Hugging Face transformer model for inference and handled model output normalization.</li>
-    <li>Built a responsive frontend interface for interactive text analysis and visualization of emotion scores.</li>
-    <li>Implemented input validation, error handling, and CORS configuration for seamless frontend-backend communication.</li>
-  </ul>
+        <article class="card project-card">
+          <div class="project-media">
+            <video controls muted playsinline preload="metadata" poster="assets/images/moodmap-cover.jpg">
+              <source src="./assets/videos/moodmap_demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
-  <div class="project-links">
-    <a class="btn-outline" href="https://github.com/saranyasounder/moodmap-api" target="_blank" rel="noreferrer">GitHub Repo</a>
-  </div>
-</article>
+          <div class="meta">FastAPI · React · Tailwind · Hugging Face · Mar 2026</div>
+          <h3>MoodMap – Emotion Analysis Platform</h3>
+          <p>
+            Built a full-stack NLP application that analyzes emotional tone in user text using a transformer model served through a FastAPI backend and visualized via a React + Tailwind frontend.
+          </p>
+          <ul>
+            <li>Designed REST API endpoints for real-time emotion classification with confidence scores and interpretation.</li>
+            <li>Integrated a Hugging Face transformer model for inference and handled model output normalization.</li>
+            <li>Built a responsive frontend interface for interactive text analysis and visualization of emotion scores.</li>
+            <li>Implemented input validation, error handling, and CORS configuration for seamless frontend-backend communication.</li>
+          </ul>
+
+          <div class="project-links">
+            <a class="btn-outline" href="https://github.com/saranyasounder/moodmap-api" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
         <article class="card project-card">
           <div class="meta">PyTorch · wandb · Mar 2026</div>
           <h3>Sequence Modeling with RNNs</h3>
@@ -643,7 +647,9 @@
             <li>Ran multi-seed hyperparameter experiments with wandb to analyze generalization.</li>
             <li>Added checkpointing and an interactive tagging script for user-input predictions.</li>
           </ul>
-          <p style="margin-top:1rem;"><a class="btn-outline" href="https://github.com/saranyasounder/Process_sequence_RNNs" target="_blank" rel="noreferrer">GitHub Repo</a></p>
+          <div class="project-links">
+            <a class="btn-outline" href="https://github.com/saranyasounder/Process_sequence_RNNs" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
         </article>
 
         <article class="card project-card">
@@ -655,7 +661,9 @@
             <li>Built validation rules to improve data quality and reduce invalid entries.</li>
             <li>Added favorites and session persistence for a smoother user experience.</li>
           </ul>
-          <p style="margin-top:1rem;"><a class="btn-outline" href="https://github.com/saranyasounder/DamMap" target="_blank" rel="noreferrer">GitHub Repo</a></p>
+          <div class="project-links">
+            <a class="btn-outline" href="https://github.com/saranyasounder/DamMap" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
         </article>
 
         <article class="card project-card">
@@ -667,8 +675,11 @@
             <li>Added background execution and Unix signal handling for SIGINT and SIGTSTP.</li>
             <li>Built a practical systems project focused on process control and shell behavior.</li>
           </ul>
-          <p style="margin-top:1rem;"><a class="btn-outline" href="https://github.com/saranyasounder/cs374/tree/main/assignment-3-smallsh-saranyasounderr-main" target="_blank" rel="noreferrer">GitHub Repo</a></p>
+          <div class="project-links">
+            <a class="btn-outline" href="https://github.com/saranyasounder/cs374/tree/main/assignment-3-smallsh-saranyasounderr-main" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
         </article>
+
       </div>
     </div>
   </section>
